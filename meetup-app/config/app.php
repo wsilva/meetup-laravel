@@ -145,6 +145,11 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		/*
+		 * RabbitMQ support
+		 */
+		'FintechFab\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider',
+
 	],
 
 	/*

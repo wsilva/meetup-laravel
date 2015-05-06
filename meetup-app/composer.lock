@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76159c801c2cfb7b1357b1a59099c3a4",
+    "hash": "4cf6f5ec9953ab7ad2f0b936aa716d4c",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -221,6 +221,45 @@
                 "string"
             ],
             "time": "2014-12-20 21:24:13"
+        },
+        {
+            "name": "fintech-fab/laravel-queue-rabbitmq",
+            "version": "5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fintech-fab/laravel-queue-rabbitmq.git",
+                "reference": "4ee6c37ad5ef8ca3cb826e8e4e75c5873740a604"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fintech-fab/laravel-queue-rabbitmq/zipball/4ee6c37ad5ef8ca3cb826e8e4e75c5873740a604",
+                "reference": "4ee6c37ad5ef8ca3cb826e8e4e75c5873740a604",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/queue": "5.0.*",
+                "illuminate/support": "5.0.*",
+                "php": ">=5.4.0",
+                "videlalvaro/php-amqplib": "2.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FintechFab\\LaravelQueueRabbitMQ": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "FINTECH_FAB",
+                    "email": "dev@fintech-fab.ru"
+                }
+            ],
+            "description": "RabbitMQ driver for Laravel Queue",
+            "time": "2015-03-03 15:02:26"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1748,6 +1787,60 @@
                 "dump"
             ],
             "time": "2015-03-31 08:12:29"
+        },
+        {
+            "name": "videlalvaro/php-amqplib",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/videlalvaro/php-amqplib.git",
+                "reference": "7989ddce7c4aa6038483d8999b12d3b1f7c81ff9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/7989ddce7c4aa6038483d8999b12d3b1f7c81ff9",
+                "reference": "7989ddce7c4aa6038483d8999b12d3b1f7c81ff9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-sockets": "Use AMQPSocketConnection"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpAmqpLib": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Alvaro Videla"
+                }
+            ],
+            "description": "This library is a pure PHP implementation of the AMQP protocol. It's been tested against RabbitMQ.",
+            "homepage": "https://github.com/videlalvaro/php-amqplib/",
+            "keywords": [
+                "message",
+                "queue",
+                "rabbitmq"
+            ],
+            "time": "2015-02-18 18:16:04"
         },
         {
             "name": "vlucas/phpdotenv",

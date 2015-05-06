@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use \Cache;
+use \Queue;
 
 use Illuminate\Http\Request;
 
@@ -21,6 +22,7 @@ class MeetupController extends Controller
 
 	public function curtir()
 	{
+		Queue::pushOn('curtida', 'nova curtida');
 		Cache::increment('curtidas');
 		return redirect('meetup')->with('message', 'Curtida Ok!');
 	}
