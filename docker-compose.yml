@@ -1,9 +1,18 @@
-proxy:
-    build: ./containers/proxy
-    volumes:
-        - /var/run/docker.sock:/tmp/docker.sock
+haproxy:
+    image: tutum/haproxy
+    links:
+        - web
+    environment:
+        - BACKEND_PORT=80
     ports:
-        - "80:80"
+        - "1936:1936"
+
+nginx:
+    build: ./containers/nginx
+    ports:
+      - "80:80"
+    links:
+      - haproxy
 
 redis:
     build: ./containers/redis
@@ -21,7 +30,6 @@ rabbit:
     ports:
         - "5672:5672"
         - "15672:15672"
-
 web:
     build: ./containers/web
     environment:
